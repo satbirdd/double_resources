@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tempalte.description %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tempalte.name %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @tempalte.filename %>
+</p>
+
+<%= link_to 'Edit', edit_tempalte_path(@tempalte) %> |
+<%= link_to 'Back', tempaltes_path %>

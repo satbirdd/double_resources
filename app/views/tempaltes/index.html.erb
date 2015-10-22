@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tempaltes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Name</th>
+      <th>Filename</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tempaltes.each do |tempalte| %>
+      <tr>
+        <td><%= tempalte.description %></td>
+        <td><%= tempalte.name %></td>
+        <td><%= tempalte.filename %></td>
+        <td><%= link_to 'Show', tempalte %></td>
+        <td><%= link_to 'Edit', edit_tempalte_path(tempalte) %></td>
+        <td><%= link_to 'Destroy', tempalte, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tempalte', new_tempalte_path %>
